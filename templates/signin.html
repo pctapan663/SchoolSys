@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    Sign In
+{% endblock %}
+
+
+{% block body %}
+    <div>
+        <h1>Please sign in to the application.</h1>
+        <div class="login">
+            <h1>Login</h1>
+            <form action="/authorize" method="post">
+                <input type="text" name="u" placeholder="Username" required="required" />
+                <input type="password" name="p" placeholder="Password" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+            </form>
+        </div>
+        <!-- Display Error Messages -->>
+        {% for message in messages %}
+            <div class=flash>{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endblock %}

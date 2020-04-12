@@ -33,6 +33,10 @@ def connect():
             conn.close()
             print('Database connection closed.')
  
- 
+
+
+def readUsers(startIndex, endIndex):
+    
+
 if __name__ == '__main__':
     connect()
